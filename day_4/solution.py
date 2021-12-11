@@ -19,7 +19,7 @@ class Board():
 
 def get_result():
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n\n')]
+        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n\n')]
         nbrs = [int(x) for x in data[0].split(',')]
         boards = [Board(d) for d in data[1:]]
         return nbrs, boards
@@ -36,7 +36,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n\n')]
+        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n\n')]
         nbrs = [int(x) for x in data[0].split(',')]
         boards = [Board(d) for d in data[1:]]
         return nbrs, boards

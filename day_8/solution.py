@@ -29,7 +29,7 @@ _SUMS = {len(v): k for k,v in _WIRES.items()}
 
 def get_result():
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
+        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
         res = []
         for line in data:
             d = line.split(' ')
@@ -49,7 +49,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
+        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
         res = []
         for line in data:
             d = line.split(' ')

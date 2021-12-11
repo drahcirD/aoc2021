@@ -6,7 +6,7 @@ import operator
 
 def get_result():
     def parse():
-        return [tuple(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
+        return [tuple(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
         
     def solve(data):
         counters = [Counter() for x in data[0]]
@@ -21,7 +21,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return [tuple(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
+        return [tuple(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
         
     def solve(data):
         def _sub_solve(data, most=True):

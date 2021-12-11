@@ -5,7 +5,7 @@ from collections import Counter
 
 def get_result():
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().strip().split(',')]
+        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().strip().split(',')]
         
     def solve(data):
         cnt = Counter()
@@ -19,7 +19,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().strip().split(',')]
+        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().strip().split(',')]
         
     def solve(data):
         cnt = Counter()

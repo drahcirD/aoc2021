@@ -5,7 +5,7 @@ import numpy as np
 
 def get_result():
     def parse():
-        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')])
+        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')])
         
     def solve(data):
         flashes = 0
@@ -42,7 +42,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')])
+        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')])
         
     def solve(data):
         flashes = 0

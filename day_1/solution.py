@@ -7,7 +7,7 @@ from collections import Counter
 
 def get_result():
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split()]
+        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split()]
         
     def solve(data):
         return sum([1 for prev, next in itertools.pairwise(data) if next > prev])
@@ -17,7 +17,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split()]
+        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split()]
         
     def solve(data):
         temp = [sum([one, two, three]) for one, two, three in zip(data, data[1:], data[2:])]
