@@ -48,7 +48,7 @@ _POINTS2 = {
 }
 def get_result2():
     def parse():
-        return [x for x in (pathlib.Path(__file__).resolve().parent / "input2.txt").read_text().split('\n')]
+        return [x for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
         
     def solve(data):
         scores = []

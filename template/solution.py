@@ -13,7 +13,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input2.txt").read_text().split('\n')]
+        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
         
     def solve(data):
         pass

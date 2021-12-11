@@ -42,7 +42,7 @@ def get_result():
 
 def get_result2():
     def parse():
-        return [x.split(" -> ") for x in (pathlib.Path(__file__).resolve().parent / "input2.txt").read_text().split('\n')]
+        return [x.split(" -> ") for x in (pathlib.Path(__file__).resolve().parent / "input1.txt").read_text().split('\n')]
         
     def solve(data):
         cnt = Counter()
