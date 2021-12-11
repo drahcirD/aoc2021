@@ -27,9 +27,9 @@ _WIRES= {0: ["a","b", "c", 'e', 'f', 'g'], 1: ['c', 'f'], 2: ['a', 'c', 'd', 'e'
  5: ['a', 'b', 'd', 'f', 'g'], 6: ['a', 'b', 'd', 'e', 'f', 'g'], 7: ['a', 'c', 'f'], 8: ['a', 'b', 'c', 'd', 'e', 'f', 'g'], 9: ['a', 'b', 'c', 'd', 'f', 'g']}
 _SUMS = {len(v): k for k,v in _WIRES.items()}
 
-def get_result():
+def get_result(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
+        data = [x for x in path.read_text().split('\n')]
         res = []
         for line in data:
             d = line.split(' ')
@@ -47,9 +47,9 @@ def get_result():
     
     return solve(parse())
 
-def get_result2():
+def get_result2(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        data = [x for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')]
+        data = [x for x in path.read_text().split('\n')]
         res = []
         for line in data:
             d = line.split(' ')
@@ -93,6 +93,15 @@ def get_result2():
         return res
     return solve(parse())
 
+def main():
+    example = pathlib.Path(__file__).resolve().parent / "example.txt"
+    return {
+        "part1": {"example": get_result(example), "input": get_result()},
+        "part2": {"example": get_result2(example), "input": get_result2()},
+    }
+
+
 if __name__ == '__main__':
   fire.Fire()
+    
     

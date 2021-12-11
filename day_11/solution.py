@@ -3,9 +3,9 @@ import pathlib
 import fire
 import numpy as np
 
-def get_result():
+def get_result(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')])
+        return np.array([np.asarray([int(nbr) for nbr in row]) for row in path.read_text().split('\n')])
         
     def solve(data):
         flashes = 0
@@ -40,9 +40,9 @@ def get_result():
     
     return solve(parse())
 
-def get_result2():
+def get_result2(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        return np.array([np.asarray([int(nbr) for nbr in row]) for row in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().split('\n')])
+        return np.array([np.asarray([int(nbr) for nbr in row]) for row in path.read_text().split('\n')])
         
     def solve(data):
         flashes = 0
@@ -79,6 +79,15 @@ def get_result2():
     
     return solve(parse())
 
+def main():
+    example = pathlib.Path(__file__).resolve().parent / "example.txt"
+    return {
+        "part1": {"example": get_result(example), "input": get_result()},
+        "part2": {"example": get_result2(example), "input": get_result2()},
+    }
+
+
 if __name__ == '__main__':
   fire.Fire()
+    
     

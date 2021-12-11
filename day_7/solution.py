@@ -3,9 +3,9 @@ import pathlib
 import fire
 from collections import Counter
 
-def get_result():
+def get_result(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().strip().split(',')]
+        return [int(x) for x in path.read_text().strip().split(',')]
         
     def solve(data):
         cnt = Counter()
@@ -17,9 +17,9 @@ def get_result():
     
     return solve(parse())
 
-def get_result2():
+def get_result2(path = pathlib.Path(__file__).resolve().parent / "input.txt"):
     def parse():
-        return [int(x) for x in (pathlib.Path(__file__).resolve().parent / "input.txt").read_text().strip().split(',')]
+        return [int(x) for x in path.read_text().strip().split(',')]
         
     def solve(data):
         cnt = Counter()
@@ -30,6 +30,15 @@ def get_result2():
     
     return solve(parse())
 
+def main():
+    example = pathlib.Path(__file__).resolve().parent / "example.txt"
+    return {
+        "part1": {"example": get_result(example), "input": get_result()},
+        "part2": {"example": get_result2(example), "input": get_result2()},
+    }
+
+
 if __name__ == '__main__':
   fire.Fire()
+    
     
